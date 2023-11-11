@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+import 'regenerator-runtime/runtime'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-	title: "Class.AI",
-	description: "AI-Powered Educational Content Generator",
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
