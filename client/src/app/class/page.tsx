@@ -20,7 +20,7 @@ export default function Class() {
 
   return (
     <div className="flex flex-col items-center w-full h-[100vh] bg-white justify-evenly">
-      <div className="relative flex w-[80vw] h-[80vh] p-5 bg-white rounded-xl shadow-xl border-2">  
+      <div className="relative flex w-[80vw] h-[80vh] p-5 bg-white rounded-xl shadow-xl border-2">
         <div className="h-full w-full bg-black rounded-lg">
 
         </div>
@@ -30,9 +30,9 @@ export default function Class() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, error. Tempore incidunt aut ea consectetur eius voluptatibus eum necessitatibus, recusandae, quae enim beatae veritatis sequi doloribus culpa ex unde voluptate!
           </p>
         </div>
-        <div className="flex justify-center items-center w-full absolute bottom-2">
+        {transcript ? <div className="flex justify-center items-center w-full absolute bottom-2">
           <p className="rounded-md p-2 bg-[#00000080] text-white">{transcript}</p>
-        </div>
+        </div> : ""}
       </div>
       {/* Controls */}
       <div className="flex">
