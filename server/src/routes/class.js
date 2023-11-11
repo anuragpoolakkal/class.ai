@@ -5,13 +5,19 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
 	try {
-		console.log("hi");
+		console.log("class");
 	} catch (err) {
 		return res.status(500).send(err);
 	}
 });
 
 router.post("/", async (req, res) => {
+	const schema = joi.object({
+		title: joi.string().min(3).required(),
+		proficiency: joi.string().min(3).required(),
+		prompt: joi.string().min(3).required(),
+	});
+
 	try {
 		const data = await schema.validateAsync(req.body);
 
@@ -22,8 +28,8 @@ router.post("/", async (req, res) => {
 		});
 
 		const savedClass = await newClass.save();
-		s;
-		return res.send(savedUser);
+		
+		return res.send(savedClass);
 	} catch (err) {
 		return res.status(500).send(err);
 	}
